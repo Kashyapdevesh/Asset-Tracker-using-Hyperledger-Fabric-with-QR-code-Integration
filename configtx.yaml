@@ -1,0 +1,79 @@
+Organizations:
+    - &OrdererOrg
+        Name: OrdererOrg
+        ID: OrdererMSP
+        MSPDir: crypto-config/ordererOrganizations/block.com/msp
+    - &Mfg1
+        Name: Mfg1MSP
+        ID: Mfg1MSP
+        MSPDir: crypto-config/peerOrganizations/mfg1.block.com/msp
+        AnchorPeers:
+            - Host: peer0.mfg1.block.com
+              Port: 5051
+    - &Mfg2
+        Name: Mfg2MSP
+        ID: Mfg2MSP
+        MSPDir: crypto-config/peerOrganizations/mfg2.block.com/msp
+        AnchorPeers:
+            - Host: peer0.mfg2.block.com
+              Port: 6051    
+    - &Shp1
+        Name: Shp1MSP
+        ID: Shp1MSP
+        MSPDir: crypto-config/peerOrganizations/shp1.block.com/msp
+        AnchorPeers:
+            - Host: peer0.shp1.block.com
+              Port: 7051    
+    - &Shp2
+        Name: Shp2MSP
+        ID: Shp2MSP
+        MSPDir: crypto-config/peerOrganizations/shp2.block.com/msp
+        AnchorPeers:
+            - Host: peer0.shp2.block.com
+              Port: 8051
+    - &Rtl1
+        Name: Rtl1MSP
+        ID: Rtl1MSP
+        MSPDir: crypto-config/peerOrganizations/rtl1.block.com/msp
+        AnchorPeers:
+            - Host: peer0.rtl1.block.com
+              Port: 9051
+Application: &ApplicationDefaults
+    Organizations:
+Orderer: &OrdererDefaults
+    OrdererType: solo
+    Addresses:
+        - orderer.block.com:7050
+    BatchTimeout: 20s
+    BatchSize:
+        MaxMessageCount: 10
+        AbsoluteMaxBytes: 99 MB
+        PreferredMaxBytes: 512 KB
+    Kafka:
+        Brokers:
+            - 127.0.0.1:9092
+    Organizations:
+Profiles:
+    BlockOrdererGenesis:
+        Orderer:
+            <<: *OrdererDefaults
+            Organizations:
+                - *OrdererOrg
+        Consortiums:
+            BlockConsortium:
+                Organizations:
+                    - *Mfg1
+                    - *Mfg2
+                    - *Shp1
+                    - *Shp2
+                    - *Rtl1
+    BlockChannel:
+        Consortium: BlockConsortium
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                - *Mfg1
+                - *Mfg2
+                - *Shp1
+                - *Shp2
+                - *Rtl1

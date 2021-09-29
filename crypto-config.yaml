@@ -1,0 +1,37 @@
+
+OrdererOrgs:
+  - Name: Orderer
+    Domain: block.com
+    Specs:
+      - Hostname: orderer
+PeerOrgs:
+  - Name: Mfg1
+    Domain: mfg1.block.com
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+  - Name: Mfg2
+    Domain: mfg2.block.com
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+  - Name: Shp1
+    Domain: shp1.block.com
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+  - Name: Shp2
+    Domain: shp2.block.com
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+  - Name: Rtl1
+    Domain: rtl1.block.com
+    Template:
+      Count: 1
+    Users:
+      Count: 1
