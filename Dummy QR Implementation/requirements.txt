@@ -1,0 +1,3 @@
+pyzbar==0.1.8
+qrcode
+Pillow==7.2.0
