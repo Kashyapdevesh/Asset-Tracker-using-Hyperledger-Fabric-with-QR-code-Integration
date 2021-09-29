@@ -1,0 +1,76 @@
+{
+    "users": [
+        {
+            "username": "mfg1user",
+            "password": "mfg1user",
+            "org": "mfg1"
+        },
+        {
+            "username": "mfg2user",
+            "password": "mfg2user",
+            "org": "mfg2"
+        },
+        {
+            "username": "shp1user",
+            "password": "shp1user",
+            "org": "shp1"
+        },
+        {
+            "username": "shp2user",
+            "password": "shp2user",
+            "org": "shp2"
+        },
+        {
+            "username": "shp1driver",
+            "password": "shp1driver",
+            "org": "shp1"
+        },
+        {
+            "username": "shp2driver",
+            "password": "shp2driver",
+            "org": "shp1"
+        },
+        {
+            "username": "rtl1user",
+            "password": "rtl1user",
+            "org": "rtl1"
+        }
+    ],
+    "orgs": [
+        {
+            "org": "mfg1",
+            "orgName": "Manufacturer1",
+            "msp": "Mfg1MSP",
+            "orgType": "mfg",
+            "peer": {}
+        },
+        {
+            "org": "mfg1",
+            "orgName": "Manufacturer2",
+            "msp": "Mfg2MSP",
+            "orgType": "mfg",
+            "peer": {}
+        },
+        {
+            "org": "shp1",
+            "orgName": "Shipper1",
+            "msp": "Shp1MSP",
+            "orgType": "shp",
+            "peer": {}
+        },
+        {
+            "org": "shp2",
+            "orgName": "Shipper2",
+            "msp": "Shp2MSP",
+            "orgType": "shp",
+            "peer": {}
+        },
+        {
+            "org": "rtl1",
+            "orgName": "Retailer1",
+            "msp": "Rtl1MSP",
+            "orgType": "rtl",
+            "peer": {}
+        }
+    ]
+}

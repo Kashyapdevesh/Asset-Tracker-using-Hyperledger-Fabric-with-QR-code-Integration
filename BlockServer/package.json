@@ -1,0 +1,24 @@
+{
+    "name": "block",
+    "version": "1.0.0",
+    "description": "Hyperledger Fabric logistics Sample Application",
+    "main": "block.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.16.4",
+        "fabric-ca-client": "~1.3.0",
+        "fabric-client": "^1.4.18"
+    },
+    "author": "Keplers",
+    "license": "Apache-2.0",
+    "keywords": [
+        "Hyperledger",
+        "Fabric",
+        "logistics",
+        "Sample",
+        "Application"
+    ]
+}

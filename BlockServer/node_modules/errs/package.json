@@ -1,0 +1,29 @@
+{
+  "name": "errs",
+  "description": "Simple error creation and passing utilities",
+  "version": "0.3.2",
+  "author": "Charlie Robbins <charlie.robbins@gmail.com>",
+  "maintainers": [
+    "dscape <nuno@nodejitsu.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/indexzero/errs.git"
+  },
+  "keywords": [
+    "errors",
+    "error",
+    "utilities"
+  ],
+  "devDependencies": {
+    "vows": "0.8.x"
+  },
+  "main": "./lib/errs",
+  "scripts": {
+    "test": "vows test/*-test.js --spec"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  }
+}
+
