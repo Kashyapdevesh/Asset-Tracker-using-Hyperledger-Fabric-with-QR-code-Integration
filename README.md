@@ -10,7 +10,7 @@ In the initial stage, we have developed a prototype network with dummy nodes to 
 We have also displayed the QR code integration facility by constructing a dummy blockchain network and mapping the information on a OR code image. We refrained from developing a frontend component in our system in the inital stage, as we thought it would be better to discuss with mentors if we should develop an independent full-stack solution or an easily integrable API. 
 We have also mentioned future scope in our projects README.md file which we plan to finish we get selected for the onsite round.
 
-![](https://github.com/Sigsev-Dev/AdaniWilmar-Asset-Tracker-using-Hyperledger-Fabric-with-QR-code-Integration/blob/master/images/Project_Logistics_Architecture.jpg)
+
 
 Here assumption is that you have installed all [prerequisites](https://hyperledger-fabric.readthedocs.io/en/release-1.3/prereqs.html) that a standard Hyperledger Fabric requires.
 
